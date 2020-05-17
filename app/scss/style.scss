@@ -1,17 +1,137 @@
-html {
-    box-sizing: border-box;
-}
+@import 'global';
+@import 'vars';
+@import 'fonts';
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
+// start header
+
+.header{
+    background-color: rgba(68,67,62, 0.7);
+    // background: transparent;
+    z-index: 1;
 }
- 
-body {
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+}
+.header__menu-wrapper{
     display: flex;
 }
-
-a {
-    text-decoration: none;
+.menu{
+    li{
+        display: inline-block;
+        @include f700;
+        font-size: 13px;
+        text-transform: uppercase;
+        & + li {
+            margin-left: 18px;
+        }
+    }
+    a{
+        color: #b8b8b8;
+        cursor: pointer;
+        position: relative;
+    }
+    a:hover{
+        color: $green;
+    }
+    a:after{
+        display: block;
+        content: '';
+        height: 3px;
+        width: 0%;
+        background-color: $green;
+        transition: width .3s ease-in-out;
+        position: absolute;
+        top: 70px;
+    } 
+    a:hover:after{
+        width: 100%;
+    }
+    .menu-home{
+        color: $green;
+    }
 }
+.header__search{
+    &:before{
+        font-family: 'icomoon';
+        content: "\e901";
+        font-weight: 900;
+        font-size: 22px;
+        color: $green;
+    }
+    margin-left: 25px;
+}
+
+// end header
+// start slider
+
+.slider{
+    min-height: 1000px;
+    background: url(../images/slider-foto1.jpg) center center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    width: 100%;
+}
+.slider-item-inner{
+    margin-top: 350px;
+    text-align: center;
+    background-color: rgba(68,67,62, 0.7);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 135px;
+}
+.slider-item-title{
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    span{
+        color: $green;
+    }
+}
+.slider-item-text{
+    font-size: 79px;
+    line-height: 85px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.slider-item-text-action{
+    font-size: 34px;
+    line-height: 45px;
+    font-weight: 300;
+    color: #fff;
+}
+.slider-item-button{
+    display: flex;
+    justify-content: center;
+}
+a.btn{
+    padding: 20px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0px -4px #fff;
+    cursor: pointer;
+}
+.btn__explore{
+    background-color: $green;
+}    
+a.btn__explore:hover{
+    background-color: #1e8672;
+}
+.btn__purchase{
+    background-color: #00cbf6;
+    margin-left: 25px;
+}
+
+// end slider

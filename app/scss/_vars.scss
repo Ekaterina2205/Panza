@@ -1,0 +1,16 @@
+@mixin f300 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+@mixin f400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+@mixin f700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+$green: #18cfab;
