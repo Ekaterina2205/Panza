@@ -32,4 +32,13 @@ $(function(){
       $('.header__search > form').slideToggle();
   });
 
+  $('.about__tabs-wrapper .tab').on('click', function(event) {
+    var id = $(this).attr('data-id');
+      $('.about__tabs-wrapper').find('.tab-item').removeClass('active-tab').hide();
+      $('.about__tabs-wrapper .tabs').find('.tab').removeClass('active');
+      $(this).addClass('active');
+      $('#'+id).addClass('active-tab').fadeIn();
+      return false;
+    });
+
 });

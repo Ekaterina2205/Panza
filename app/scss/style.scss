@@ -284,9 +284,9 @@ button.slick-next.slick-arrow.color-off{
     font-size: 36px;
     line-height: 40px;
     font-weight: 400px;
-    text-align: center;
     position: relative;
     margin-bottom: 80px;
+    display: inline-block;
     &::before{
         content: '';
         display: block;
@@ -294,8 +294,8 @@ button.slick-next.slick-arrow.color-off{
         width: 75px;
         background-color: $green;
         position: absolute;
-        bottom: -62%;
-        left: 51%;
+        bottom: -60%;
+        left: 47%;
     }
     &::after{
         content: '';
@@ -304,12 +304,13 @@ button.slick-next.slick-arrow.color-off{
         width: 75px;
         background-color: $green;
         position: absolute;
-        left: 50%;
-        bottom: -50%;
+        left: 45%;
+        bottom: -49%;
     }
 }
 .features__title{
     color: #4e4e4e;
+    text-align: center;
 }
 .features__items{
     display: flex;
@@ -336,3 +337,115 @@ button.slick-next.slick-arrow.color-off{
 }
 
 // end features
+// start about
+.about{
+    min-height: 680px;
+    background: url(../images/image-about.jpg) center center/cover no-repeat;
+    padding-top: 95px;
+    padding-bottom: 90px;
+    &__title{
+        color: #fff;
+    }
+}
+.about__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.about__skills{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.about__tabs-wrapper{
+    .tabs{
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 60px;
+        display: flex;
+        span {
+            cursor: pointer;
+            position: relative;
+            &:hover{
+                color: $green;
+                &:before{
+                    content: '';
+                    height: 3px;
+                    width: 100%;
+                    background-color: $green;
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top: -10px;
+                }
+            }
+            & + span{
+               margin-left: 25px; 
+            }
+        }
+    }
+    .tab_content{
+        font-size: 13px;
+        color: #fff;
+        line-height: 23px;
+        max-width: 750px;
+        .tab-item{
+            display: none;
+            &:nth-child(3){
+                display: block;
+            }
+        }
+    }
+}
+span.tab.active{
+    color: $green;
+    &:before{
+        content: '';
+        height: 3px;
+        width: 100%;
+        background-color: $green;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: -10px;
+    }
+}
+.skills__items{
+    max-width: 560px;
+}
+.skills__item{
+    margin-bottom: 15px;
+    border: 1px solid #959595;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    span{
+        display: block;
+        padding: 8px;
+    }
+}
+.skill-interface{
+    background-color: #9c5da5;
+    width: 70%;
+}
+.skill-webdesign{
+    background-color: #11b0de;
+    width: 80%;
+}
+.skill-html{
+    background-color: #d67f7f;
+    width: 65%;
+}
+.skill-appdesign{
+    background-color: #20bc9d;
+    width: 90%;
+}
+.skill-wordpress{
+    background-color: #bb8a36;
+    width: 60%;
+}
+
+// end about
