@@ -41,4 +41,22 @@ $(function(){
       return false;
     });
 
+    $('.services__tabs-wrapper .tab').on('click', function(event) {
+      var id = $(this).attr('data-id');
+        $('.services__tabs-wrapper').find('.tab-item').removeClass('active-tab').hide();
+        $('.services__tabs-wrapper .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#'+id).addClass('active-tab').fadeIn();
+        return false;
+      });
+
+    var mixer = mixitup('.works__inner-box');
+
+  $('.works__inner-box').simpleLoadMore({
+    item: '.works__box-item',
+    count: 8,
+    itemsToLoad: 4,
+    btnHTML: '<a href="#" class="works__load-btn">Load More</a>',
+  });
+
 });
