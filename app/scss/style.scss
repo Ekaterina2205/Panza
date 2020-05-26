@@ -170,6 +170,7 @@ a.btn{
 }    
 a.btn__explore:hover{
     background-color: #1e8672;
+    transition: all 0.3s;
 }
 .btn__purchase{
     background-color: #00cbf6;
@@ -177,6 +178,7 @@ a.btn__explore:hover{
 }
 a.btn__purchase:hover{
     background-color: #139bb8;
+    transition: all 0.3s;
 }
 .slider-nav{
     width: 170px;
@@ -328,6 +330,7 @@ button.slick-next.slick-arrow.color-off{
     margin: 20px 0;
     &:hover{
         color: $green;
+        transition: all 0.3s;
     }
     &:before{
         color: $green;
@@ -369,6 +372,7 @@ button.slick-next.slick-arrow.color-off{
             position: relative;
             &:hover{
                 color: $green;
+                transition: all 0.3s;
                 &:before{
                     content: '';
                     height: 3px;
@@ -378,6 +382,7 @@ button.slick-next.slick-arrow.color-off{
                     position: absolute;
                     right: 20px;
                     top: -10px;
+                    transition: all 0.3s;
                 }
             }
             & + span{
@@ -718,4 +723,95 @@ span.tab.active{
 }
 
 // end purchase
+// start news
 
+.news{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.news-title{
+    color: #4e4e4e;
+    font-weight: 400;
+    text-align: center;
+}
+.news__content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.news__card{
+    max-width: 265px;
+    border: 1px solid #e8e9eb;
+    position: relative;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    a{
+        display: block;
+        img{
+            width: 260px;
+            height: 230px;
+            object-fit: cover;
+        }
+    }
+}
+.news__card-date{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #203e38;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    span{
+        display: block;
+    }
+}
+.news__card-text{
+    background-color: #f8fcfe;
+    padding: 10px 15px;
+}
+.news__card-title{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #717171;
+    margin-bottom: 10px;
+}
+.news__author-wrapper{
+    display: flex;
+}
+.news__card-author{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    padding-right: 15px;
+    border-right: 1px solid #777777;
+    color: #777777;
+}
+a.news__card-comment{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    padding-left: 15px;
+    color: #777777;
+}
+.news__card:hover{
+    box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    transition: all 0.3s;
+    .news__card-date{
+        background-color: $green;
+        transition: all 0.3s;
+    }
+    .news__card-title{
+        color: $green;
+        transition: all 0.4s;
+    }
+
+}
+// end news
+
+  
+  
