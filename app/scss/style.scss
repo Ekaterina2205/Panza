@@ -887,10 +887,112 @@ a.news__card-comment{
     font-weight: 400;
 }
 
-
-
-
 // end counter
+// start pricing
+
+.pricing{
+    margin: 100px auto;
+}
+.pricing__title{
+    text-align: center;
+    color: #4e4e4e;
+    font-weight: 400;
+}
+.pricing__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.pricing__card{
+    background-color: #f8fcfe;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    width: 285px;
+    text-align: center;
+    button{
+        margin: 25px 15px;
+        padding: 18px 50px;
+        background-color: #2e4a5b;
+        border: 1px solid #2e4a5b;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    &:hover{
+        box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+        button{
+            background-color: $green;
+            border: 1px solid $green;
+        }
+    }
+}
+.pricing__card-title{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #717171;
+    padding: 25px 15px 15px;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+    overflow: hidden;
+}
+.pricing__card-cost{
+    background-color: #2e4a5b;
+    padding: 25px 15px;
+    color: #fff;
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 700;
+    span{
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+    }
+}
+.pricing__card-services{
+    li{
+        padding: 15px 15px 10px;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #777777;
+    }
+}
+.pricing__card-offer{
+    box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    .pricing__card-title::after{
+        content:'OFFER';
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        background-color: $green;
+        display: block;
+        padding: 0 30px;
+        position: absolute;
+        top: 8px;
+        right: -25px;    
+        transform: rotate(45deg);
+    }
+    .pricing__card-title{
+        color: $green;
+    }
+    .pricing__card-cost{
+        background-color:$green;
+    }
+    button{
+        background-color: $green;
+        border: 1px solid $green;
+    }
+}
+
+
+
+
+// end pricing
+
 
 
   
