@@ -4,7 +4,10 @@ $(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        fade: false,
+        speed: 500,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
         asNavFor: '.slider-nav'
       });
     $('.slider-nav').slick({
@@ -71,6 +74,24 @@ $(function(){
         });
     });
     
+    $('.reviews__slider-items').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      speed: 500,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      asNavFor: '.reviews__slider-nav'
+    });
+  $('.reviews__slider-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.reviews__slider-items',
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+      variableWidth: true
+    });
 
 
 });
