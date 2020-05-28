@@ -93,6 +93,5 @@ $(function(){
       variableWidth: true
     });
 
-
 });
 

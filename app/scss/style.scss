@@ -994,12 +994,12 @@ a.news__card-comment{
     background: linear-gradient(rgba(13, 25, 58, 0.7)), url(../images/reviews-bgc.jpg) center center/cover no-repeat;
     padding-top: 90px;
     padding-bottom: 90px;
+    text-align: center;
 }
 .reviews__title{
     font-size: 36px;
     line-height: 40px;
     color: #fff;
-    text-align: center;
 }
 .reviews__slider-item{
     margin-bottom: 50px;
@@ -1072,8 +1072,115 @@ a.news__card-comment{
     margin-right: 30px;
 }
 
-
 // end reviews
+// start team
+.team{
+    padding-top: 95px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.team__title{
+    color: #4e4e4e;
+}
+.team__box-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.team__box{
+    max-width: 265px;
+    background-color: #2e4a5b;
+    margin-right: 30px;
+    position: relative;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    img{
+        width: 265px;
+        height: 230px;
+        object-fit: cover;
+    }
+    &:hover{
+        background-color: $green;
+        .team__profession{
+            color: #2e4a5b;
+        }
+        .team__box-plus-wrap{
+            display: block;
+        }
+    }
+}
+.team__box-plus-wrap{
+    width: 265px;
+    height: 230px;
+    background-color: rgba(81, 81, 82, 0.7);
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.team__box-border{
+    width: 85px;
+    height: 85px;
+    border: 2px solid $green;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.team__box-plus{
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .icon-plus{
+        color: $green;
+        font-size: 18px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.team__worker{
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 700;
+    color: #fff;
+}
+.team__profession{
+    font-size: 13px;
+    line-height: 20px;
+    color: $green;
+    text-align: left;
+    padding: 0 20px 15px 20px;
+}
+.team__social-icons{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #c7cfd3;
+}
+.team__icon{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    &.icon-facebook, 
+    &.icon-twitter,
+    &.icon-skype{
+        border-right: 1px solid #c7cfd3;
+    }
+}
+
+
+
+// end team
+
+
 
 
 
